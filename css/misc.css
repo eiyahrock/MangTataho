@@ -1,0 +1,18 @@
+.btn{
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+/*.like{
+font-size: 40px;
+border: 1px solid #000;
+margin: 5px auto;
+color: #FFF;
+background-color: #FFFFFF;
+text-align: center;
+}*/
+
+#taho-flavors .content .box .btn .heart{
+    color: #FFF;
+}

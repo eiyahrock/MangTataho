@@ -1,0 +1,1580 @@
+/* Fonts to use */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap');
+
+/*----this is just some colors that i used as a reference 
+in this webpage, so don't expect thati used it frequently. 
+my color scheme is still based on my own color palette, and used the rgba and hex.*/
+
+:root {
+    --cherry-red: rgba(188, 4, 2, 255);
+    --strawberry-pink: rgba(255, 110, 105, 255);
+    --vanilla-yellow: rgba(236, 187, 92, 255);
+    --cream-white: rgba(212, 202, 177, 255);
+    --grape-violet: rgba(42, 34, 45, 255);
+}
+
+
+/* for whole page */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    background-color: #FFF7F3;
+}
+
+
+/*for the elements of the page*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    padding: 5px 30px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header .logo {
+    width: 250px;
+    margin-top: 20px;
+    cursor: pointer;
+    filter: drop-shadow(5px 5px 7px rgba(95, 76, 78, 1.0));
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigation li a {
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 5px 5px 7px rgba(95, 76, 78, 0.5), -2px -2px 4px #ffffff;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+
+header .navigation li .fa-cart-shopping{
+    width: 60px;
+    text-align: center;
+}
+
+header .search{
+    position: relative;
+    width: 300px;
+    height: 40px;
+    padding: 15px 25px;
+    margin-left: 20px;
+}
+
+header .search input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: transparent;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 0 10px 0 45px;
+    box-shadow: 5px 5px 7px rgba(95, 76, 78, 0.5), -1px -1px 4px #ffffff;
+}
+
+header .search input::placeholder{
+    color: #FFF;
+}
+
+header .search .fa-search{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #fff;
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+}
+
+header .navigation li a:hover {
+    background-color: #FFF5F2;
+    font-size: 15px;
+    font-weight: 800;
+    box-shadow: 0px 15px 20px rgba(87, 66, 63, 0.4);
+    color: var(--cherry-red);
+    transform: translateY(-7px);
+}
+
+
+/* for active tab of an open page of the site */
+
+header .navigation li a.active {
+    background-color: #AD94C5;
+    color: #FFF4F4;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 5px 5px 9px rgba(95, 76, 78, 0.5), -2px -2px 4px #ffffff;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+header.sticky .navigation li a.active {
+    background-color: #D2B48C;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    border: none;
+    border-radius: 45px;
+    /*box-shadow: 5px 5px 0px rgba(0, 0, 0, 0), -2px -2px 4px #ffffff;*/
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+
+/* Sticky nav */
+
+header.sticky {
+    background: rgb(118, 4, 3);
+    width: 100%;
+    height: 15vh;
+    padding: 0px 70px;
+}
+
+/* header.sticky .logo {
+    margin: 50px 50px;
+    padding-top: 10%;
+} */
+
+header.sticky .navigation ul {
+    width: auto;
+}
+
+header.sticky ul {
+    width: auto;
+}
+
+header.sticky ul li a {
+    color: #fff;
+    font-family: 'poppins';
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 400px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    transition: all 0.6s ease 0s;
+    /*box-shadow: 5px 5px 4px rgba(0, 0, 0, 0), -2px -2px 4px #ffffff;*/
+}
+
+header.sticky ul li a:hover {
+    background-color: #F3EED9;
+    color: #713531;
+    font-size: 15px;
+    font-weight: 50px;
+    /*box-shadow: 0 15px 20px rgba(0, 0, 0, 0);*/
+    transform: translateY(-1px);
+}
+
+
+/* header - headline */
+
+.home {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(140deg, rgba(255, 110, 105, 0.4), rgba(167, 132, 255, 0.4)), url('../assets/SimpleShiny2.svg');
+    background-position: center;
+    background-size: cover;
+}
+
+.home .text-box {
+    position: absolute;
+    width: 90%;
+    margin-top: 50px;
+    margin-left: 70px;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.home .text-box h1 {
+    font-size: 65px;
+    font-weight: bold;
+    font-family: 'poppins';
+    line-height: 1.4;
+}
+
+
+/* Red Line */
+
+.home hr.red-line {
+    width: 39vw;
+    height: 1vh;
+    margin: 5px 0 5px 0;
+    background-color: #AF242D;
+    border: none;
+}
+
+
+/* header - sub headline */
+
+.home .text-box h4 {
+    margin: 30px 0px 40px;
+    font-family: 'poppins';
+    font-size: 1.2em;
+    font-style: normal;
+    font-weight: 800px;
+    line-height: 1.6;
+    color: #40403c;
+    width: 400px;
+    /*text-shadow: 8px 4px 7px rgb(51, 32, 34, 0.8);*/
+}
+
+
+/* MangTataho Cute Icon*/
+
+.home .mangtataho-mascot-icon {
+    position: relative;
+    display: flex;
+    flex: 1 1 40rem;
+    float: right;
+    margin-top: 60px;
+    margin-right: 100px;
+    width: auto;
+    height: 550px;
+    padding: 1rem;
+    text-align: right;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0rem);
+    }
+    50% {
+        transform: translateY(2rem);
+    }
+}
+
+
+/*Home page - Facts Section*/
+
+.facts {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+}
+
+.facts h1 {
+    position: relative;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.facts p {
+    position: relative;
+    text-align: center;
+}
+
+.facts .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.facts .container .box {
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.facts .box .icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    background: #f7ac7b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.facts .box:nth-child(1):hover .icon {
+    box-shadow: 0 0 0 400px #f7ac7b;
+    background: #f7ac7b;
+}
+
+.facts .box:nth-child(2) .icon {
+    background: #f0bfc0;
+}
+
+.facts .box:nth-child(2):hover .icon {
+    box-shadow: 0 0 0 400px #f0bfc0;
+    background: #f0bfc0;
+}
+
+.facts .box:nth-child(3) .icon {
+    background: #e2cef8;
+}
+
+.facts .box:nth-child(3):hover .icon {
+    box-shadow: 0 0 0 400px #e2cef8;
+    background: #e2cef8;
+}
+
+.facts .box .content {
+    padding-top: 20px;
+}
+
+
+/*End of Facts Section*/
+
+
+/* red line divider */
+
+hr.red-line-divider {
+    width: 70vw;
+    height: 1vh;
+    margin: auto;
+    background-color: rgba(179, 87, 70, 0.6);
+    border: none;
+}
+
+
+/*Home Page - Best Flavors of Taho Section*/
+
+.home-menu {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+    margin: 30px 0 80px 0;
+}
+
+.home-menu h1 {
+    position: relative;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.home-menu .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.home-menu .container .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.home-menu .content .box .imgbx {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+}
+
+.home-menu .content .box .imgbx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-menu .content .box .imgbx:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+.home-menu .imgbx .layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+
+/* Home Page - change this part to violet/purple, red/strawberry, brown/classic 
+for the flavors of taho*/
+
+#ube-taho:hover {
+    background-color: rgba(97, 72, 132, 0.7);
+}
+
+#original-taho:hover {
+    background-color: rgba(137, 80, 67, 0.7);
+}
+
+#strawberry-taho:hover {
+    background-color: rgba(196, 62, 74, 0.7);
+}
+
+.home-menu .imgbx .layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.home-menu .imgbx .layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+/* End of Home Menu Section */
+
+
+/* Home Page - New products section*/
+
+.home-products {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.home-products h1 {
+    font-size: 35px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+}
+
+.home-products .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 90px 0 0px;
+}
+
+.home-products .content .card {
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    min-height: 220px;
+    background-color: #fff;
+    margin: 50px 16px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.home-products .content .card:hover {
+    height: 370px;
+}
+
+.home-products .content .card .imgbx {
+    position: relative;
+    width: 260px;
+    height: 220px;
+    top: -40%;
+    left: 6px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+}
+
+.home-products .content .card .imgbx img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.home-products .content .card .text {
+    position: relative;
+    top: -140px;
+    padding: 10px 15px;
+    color: #111;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.home-products .content .card .text h3 {
+    font-weight: 30px;
+    margin-bottom: 10px;
+}
+
+.home-products .content .card:hover .text {
+    margin-top: 40px;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+
+/* Home Page - View More Button
+in New products section */
+
+.button a {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #7B5647;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 15px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/* Customer reviews */
+
+.customers-review {
+    padding: 100px;
+}
+
+.customers-review h1 {
+    position: relative;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.customers-review p {
+    text-align: center;
+}
+
+.customers-review .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.customers-review .content .box {
+    position: relative;
+    width: 340px;
+    margin: 10px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .08);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.customers-review .content .box img {
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+}
+
+.customers-review .box .text p {
+    padding: 0;
+    font-style: italic;
+    text-align: left;
+}
+
+.customers-review .box .text h3 {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.customers-review .fa,
+.customers-review .far {
+    color: #f44336;
+}
+
+
+/* Home page - Contact Us/Learn More/call to action */
+
+.taho-short-clip {
+    margin: 100px auto;
+    width: 90%;
+    background-image: linear-gradient(rgba(153, 153, 153, 0.7), rgb(255, 145, 0, 0.3)), url('/MangTatahoWebpage[LATEST]/assets/taho-banner-home-1.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 50px;
+}
+
+.taho-short-clip h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+    font-size: 40px;
+}
+
+
+/* Button @home - learn more */
+
+.learn-more-button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #FF9100;
+    /* color: ghostwhite;*/
+}
+
+.learn-more-button span a {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    text-decoration: none;
+    color: #FF9100;
+}
+
+.learn-more-button:hover span a {
+    color: var(--grape-violet);
+}
+
+.learn-more-button::before,
+.learn-more-button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.learn-more-button::before {
+    content: "";
+    background: var(--grape-violet);
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.learn-more-button:hover::before {
+    transform: translate3d(110%, 0, 0);
+}
+
+
+/*About page*/
+
+.sub-header-about {
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(140deg, rgba(255, 110, 105, 0.4), rgba(42, 34, 45, 0.7)), url('../assets/headBG2-a.png');
+    background-position: center;
+    position: relative;
+}
+
+
+/* Headline/title */
+
+.text-title {
+    height: 20px;
+    position: absolute;
+    top: 60%;
+    width: 100%;
+}
+
+.text-title h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+}
+
+.history {
+    padding: 5%;
+    background-color: #FF9A54;
+}
+
+.history .row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 70px;
+    border-radius: 50px;
+}
+
+.history .row .col50 {
+    position: relative;
+    width: 48%;
+}
+
+.titleText h1 {
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+.titleText p {
+    font-size: 1em;
+}
+
+.history .row .col50 .imgbx {
+    position: relative;
+    width: 100%;
+    min-height: 380px;
+    height: 100%;
+}
+
+.history .row .col50 .imgbx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 10px 10px 0px 0px rgba(47, 72, 88, 1);
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(47, 72, 88, 1);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(47, 72, 88, 1);
+}
+
+
+/* About Page - developers */
+
+.founder {
+    align-items: center;
+    text-align: center;
+    padding: 0 50px 100px;
+}
+
+.founder .title-line {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #FF878C;
+}
+
+
+/* Contents */
+
+.founder .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.founder .content .box {
+    width: 200px;
+    margin: 40px 15px 0;
+}
+
+.founder .content .box .imgbx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.founder .content .box .imgbx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*End of About page*/
+
+
+/*Menu page*/
+
+.sub-header-menu {
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(140deg, rgba(255, 110, 105, 0.4), rgba(42, 34, 45, 0.7)), url('../assets/headBG1-a.png');
+    background-position: center;
+    position: relative;
+}
+
+/* Contents */
+
+
+/* title heading in the top of tile menu*/
+
+.title-line {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+    color: #FF878C;
+}
+
+.title-line span {
+    color: #FFB0B4;
+}
+
+
+/* Products */
+
+
+/* Different Flavors of Taho */
+
+.taho-flavors {
+    top: 0;
+    padding: 0 0 100px 0;
+}
+
+.taho-flavors hr.red-line-divider {
+    width: 70vw;
+    height: 1vh;
+    margin: auto;
+    background-color: rgba(179, 87, 70, 0.6);
+    border: none;
+}
+
+.taho-flavors .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.taho-flavors .content .box {
+    position: relative;
+    width: 335px;
+    margin: 20px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+.taho-flavors .content .box .imgbx {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+}
+
+.taho-flavors .content .box .imgbx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.taho-flavors .content .box .text {
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+}
+
+.taho-flavors .content .box .text p {
+    font-size: 1.0rem;
+    color: #666;
+}
+
+.taho-flavors .content .box:hover .imgbx {
+    top: 0;
+    transform: translateY(-100%);
+    transition: 0.5s;
+}
+
+
+/*End of Menu page*/
+
+
+/*Contact Page*/
+
+.sub-header-contact {
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(140deg, rgba(255, 110, 105, 0.4), rgba(42, 34, 45, 0.7)), url('../assets/headBG3-a.png');
+    background-position: center;
+    position: relative;
+}
+
+/* Contents */
+
+
+/* Contact Us*/
+
+.contact-us .row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.location {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location h2 {
+    text-align: center;
+}
+
+.location iframe {
+    margin-top: 30px;
+    width: 100%;
+}
+
+
+/* .contact-us{
+    position: relative;
+    display: flex;
+    width: 80%;
+    margin: 30px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-us .contact-col{
+    position: relative;
+    padding-right: 100px;
+}
+
+.contact-us .info .contact-col div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-us .info .contact-col div .fa {
+    font-size: 28px;
+    color: #891A2D;
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.contact-us .info .contact-col div p {
+    padding: 0;
+}
+
+.contact-us .info .contact-col div h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+
+.contact-form{
+    position: relative;
+    padding: 75px 50px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+}
+
+.contact-form .inputbox{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-form .inputbox input,
+.contact-form .inputbox textarea
+{
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+} */
+
+.contact-us {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.contact-col {
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+
+.contact-col div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-col div .fa {
+    font-size: 28px;
+    color: #891A2D;
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.contact-col div p {
+    padding: 0;
+}
+
+.contact-col div h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+
+.contact-col input,
+.contact-col textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/* contact forms/feeback */
+
+.contact-col .sendFeedback h1 {
+    font-size: 80rem;
+    font-weight: 600;
+}
+
+
+/* for the submit/send button */
+
+button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #FFC246;
+    z-index: 1;
+    background: #ED0415;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #FFC246;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+button:hover {
+    color: #ED0415;
+}
+
+button:hover::before {
+    width: 100%;
+}
+
+
+/*End of Contact page*/
+
+
+/* footer */
+
+footer {
+    background-color: var(--grape-violet);
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+footer h4 {
+    color: #f44336;
+    font-size: 20px;
+    margin-bottom: 18px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+footer p {
+    color: var(--cream-white);
+}
+
+footer .icons .fab {
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+footer .far {
+    color: #f44336;
+}
+
+
+/*Responsive*/
+
+@media (max-width: 1100px) {
+    .mangtataho-mascot-icon {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 1060px) {
+    header {
+        padding: 10px 20px;
+    }
+    header.sticky {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    header {
+        padding: 10px 21px;
+    }
+    header.sticky {
+        padding: 0 21px;
+    }
+}
+
+@media (max-width: 970px) 
+{
+    header {
+        padding: 10px 20px;
+    }
+    header.sticky {
+        padding: 0 20px;
+    }
+    header.sticky .logo {
+        margin: 0px 0px;
+        padding-top: 10%;
+    }
+    header .navigation {
+        display: none;
+    }
+    header .navigation.active {
+        width: 50%;
+        height: 40vh;
+        position: fixed;
+        top: 15%;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+        opacity: 0.9;
+    }
+    header .navigation li {
+        margin-left: 0px;
+    }
+    header .navigation li a {
+        color: #111;
+        text-decoration: none;
+        padding: 15px 25px;
+        font-size: 1.5em;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        border: none;
+        box-shadow: 0 0 0 rgba(0, 0, 0);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+    }
+    header .navigation li a.active {
+        background-color: transparent;
+        color: #AD94C5;
+        padding: 15px 25px;
+        font-size: 1.5em;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+    }
+    header .navigation li a:hover {
+        background-color: transparent;
+        font-size: 1.5em;
+        font-weight: 800;
+        box-shadow: 0 0 0 rgba(0, 0, 0);
+        color: #AD94C5;
+        transform: none;
+    }
+    header.sticky .navigation li a {
+        color: #111;
+        text-decoration: none;
+        padding: 15px 25px;
+        font-size: 1.5em;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        border: none;
+        box-shadow: 0 0 0 rgba(0, 0, 0);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+    }
+    header.sticky .navigation li a.active {
+        background-color: transparent;
+        color: var(--cherry-red);
+        padding: 15px 25px;
+        font-size: 1.5em;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+    }
+    header.sticky .navigation li a:hover {
+        background-color: transparent;
+        font-size: 1.5em;
+        font-weight: 800;
+        box-shadow: 0 0 0 rgba(0, 0, 0);
+        color: var(--cherry-red);
+        transform: none;
+    }
+    .menu {
+        position: relative;
+        top: 11px;
+        width: 40px;
+        height: 40px;
+        background: url('../assets/menu.png');
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-size: center;
+        cursor: pointer;
+    }
+    .menu.active {
+        background: url('../assets/close.png');
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-size: center;
+        cursor: pointer;
+    }
+    .home .text-box h1 {
+        font-size: 60px;
+    }
+    /* home page */
+    .home .text-box {
+        margin-top: 74px;
+        margin-left: 13px;
+    }
+    /* .home .text-box h1 {
+        font-size: 40px;
+    } */
+    .home hr.red-line {
+        width: 80vw;
+    }
+    section.facts {
+        padding: 15px;
+        margin-top: 40px;
+    }
+    .facts .title {
+        font-size: 28px;
+    }
+    section.home-menu {
+        padding: 15px;
+        margin-top: 40px;
+    }
+    .home-menu h1 {
+        font-size: 28px;
+    }
+    section.home-products {
+        padding: 15px;
+        margin-top: 40px;
+    }
+    .home-products h1 {
+        font-size: 28px;
+    }
+    section.customers-review {
+        padding: 15px;
+        margin-top: 40px;
+    }
+    .customers-review h1 {
+        font-size: 28px;
+    }
+    /* end of home page */
+    /* Menu page */
+    .sub-header-menu {
+        height: 32vh;
+    }
+    h1.title-line {
+        padding: 15px;
+        font-size: 2rem;
+    }
+    /* end of Menu page */
+    /* about page */
+    .history {
+        padding: 40px;
+    }
+    .history .row {
+        flex-direction: column;
+        padding: 55px 36px;
+    }
+    .history .row .col50 {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+    .sub-header-about {
+        height: 32vh;
+    }
+    .history .row .col50 .imgbx {
+        min-height: 400px;
+        margin-top: 10px;
+    }
+    .founder .title-line {
+        padding: 15px;
+        font-size: 2rem;
+    }
+    .founder .title h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    /*contact*/
+    .sub-header-contact {
+        height: 32vh;
+    }
+    .contact-us .row {
+        flex-direction: column;
+    }
+    .location {
+        padding: 44px 0;
+    }
+}
+
+
+@media (max-width: 560px) 
+{
+    /* home page */
+    .home .text-box {
+        margin-top: -14px;
+        margin-left: 17px;
+        left: 0;
+        transform: none;
+    }
+    .home .text-box h1 {
+        font-size: 40px;
+    }
+    .home hr.red-line {
+        width: 80vw;
+    }
+    .home .text-box h4 {
+        font-size: 14px;
+    }
+    section.facts {
+        padding: 15px;
+        margin-top: 40px;
+    }
+    .facts .title {
+        font-size: 28px;
+    }
+    section.home-menu {
+        padding: 15px;
+        margin-top: 40px;
+    }
+    .home-menu h1 {
+        font-size: 28px;
+    }
+    section.home-products {
+        padding: 15px;
+        margin-top: 40px;
+    }
+    .home-products h1 {
+        font-size: 28px;
+    }
+    section.customers-review {
+        padding: 15px;
+        margin-top: 40px;
+    }
+    .customers-review h1 {
+        font-size: 28px;
+    }
+    .taho-short-clip h1 {
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+    /* end of home page */
+    /* Menu page */
+    .sub-header-menu {
+        height: 32vh;
+    }
+    h1.title-line {
+        padding: 15px;
+        font-size: 2rem;
+    }
+    
+    /* end of Menu page */
+    /* about page */
+    .history {
+        padding: 40px;
+        height: 0v;
+    }
+    .history .row {
+        flex-direction: column;
+    }
+    .history .row .col50 {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+    .sub-header-about {
+        height: 32vh;
+    }
+    .history .row .col50 .imgbx {
+        min-height: 300px;
+        margin-top: 10px;
+    }
+    .founder .title-line {
+        padding: 15px;
+        font-size: 2rem;
+    }
+    .founder .title h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    /*contact*/
+    .sub-header-contact {
+        height: 32vh;
+    }
+    .contact-us .row {
+        flex-direction: column;
+    }
+    .location {
+        padding: 44px 0;
+    }
+    button {
+        width: 100%;
+    }
+
+}
